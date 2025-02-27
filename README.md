@@ -12,50 +12,65 @@ This project is a chat application that integrates OpenAI's GPT model with IBM W
 - **Light/Dark Mode**: Toggle between light and dark themes.
 - **Voice Options**: Choose from multiple voice options for the assistant's responses.
 
-## Prerequisites
+## Technologies Used
 
-- [Docker](https://docs.docker.com/get-docker/) installed on your machine.
-- IBM Entitlement Key to access IBM Watson services. [Get a Watson trial license](https://www.ibm.com/account/reg/us-en/subscribe?formid=urx-51754).
+- **Frontend**: HTML5, CSS3, JavaScript, jQuery, Bootstrap
+- **Backend**: Flask (Python web framework)
+- **AI Services**:
+    - OpenAI GPT-3.5 Turbo for natural language processing
+    - IBM Watson Speech-to-Text for voice recognition
+    - IBM Watson Text-to-Speech for voice synthesis
+- **Containerization**: Docker
+- **APIs**: RESTful API architecture for service communication
+
+## Demo
+
+![ChatApp Interface](demo/va1.png)
+
+![ChatApp Interface](demo/va2.png)
+
+Watch our application in action:
+- [Voice Command Demo](demo/video.mp4)
 
 ## Setup
 
 1. **Clone the repository**:
-    ```sh
-    git clone <repository-url>
-    cd chatapp-with-voice-and-openai
-    ```
+        ```sh
+        git clone <repository-url>
+        cd chatapp-with-voice-and-openai
+        ```
 
 2. **Build the Docker images**:
-    - For Speech-to-Text:
-        ```sh
-        cd models/stt
-        docker build . -t stt-standalone
-        ```
-    - For Text-to-Speech:
-        ```sh
-        cd ../tts
-        docker build . -t tts-standalone
-        ```
+        - For Speech-to-Text:
+                ```sh
+                cd models/stt
+                docker build . -t stt-standalone
+                ```
+        - For Text-to-Speech:
+                ```sh
+                cd ../tts
+                docker build . -t tts-standalone
+                ```
 
 3. **Run the Docker containers**:
-    - For Speech-to-Text:
-        ```sh
-        docker run --rm -it --env ACCEPT_LICENSE=true --publish 1080:1080 stt-standalone
-        ```
-    - For Text-to-Speech:
-        ```sh
-        docker run --rm -it --env ACCEPT_LICENSE=true --publish 1081:1080 tts-standalone
-        ```
+        - For Speech-to-Text:
+                ```sh
+                docker run --rm -it --env ACCEPT_LICENSE=true --publish 1080:1080 stt-standalone
+                ```
+        - For Text-to-Speech:
+                ```sh
+                docker run --rm -it --env ACCEPT_LICENSE=true --publish 1081:1080 tts-standalone
+                ```
 
 4. **Install Python dependencies**:
-    ```sh
-    pip install -r requirements.txt
-    ```
+        ```sh
+        pip install -r requirements.txt
+        ```
 
 5. **Run the Flask server**:
-    ```sh
-    python server.py
-    ```
+        ```sh
+        python server.py
+        ```
 
 ## Usage
 
