@@ -25,12 +25,12 @@ This project is a chat application that integrates OpenAI's GPT model with IBM W
 
 ## Demo
 
-![ChatApp Interface](demo/va1.png)
+![ChatApp Interface]("demo pics and videos"/va1.png)
 
-![ChatApp Interface](demo/va2.png)
+![ChatApp Interface]("demo pics and videos"/va2.png)
 
 Watch our application in action:
-- [Voice Command Demo](demo/video.mp4)
+- [Voice Command Demo]("demo pics and videos".mp4)
 
 ## Setup
 
